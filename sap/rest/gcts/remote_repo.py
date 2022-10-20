@@ -127,7 +127,7 @@ class RepoActivitiesQueryParams:
     def set_tocommit(self, value: 'str') -> 'RepoActivitiesQueryParams':
         """Set the toCommit. If None, remove from parameters"""
 
-        if not value:
+        if value is None:
             try:
                 del self._params['toCommit']
             except KeyError:
@@ -140,7 +140,7 @@ class RepoActivitiesQueryParams:
     def set_fromcommit(self, value: 'str') -> 'RepoActivitiesQueryParams':
         """Set the fromCommit. If None, remove from parameters"""
 
-        if not value:
+        if value is None:
             try:
                 del self._params['fromCommit']
             except KeyError:
@@ -153,7 +153,7 @@ class RepoActivitiesQueryParams:
     def set_operation(self, value: 'str') -> 'RepoActivitiesQueryParams':
         """Set the type. If None, remove from parameters"""
 
-        if not value:
+        if value is None:
             try:
                 del self._params['type']
             except KeyError:
